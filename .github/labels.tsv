@@ -1,0 +1,22 @@
+# Taxonomía de labels para el triage automático de issues (claude-issue-triage.yml).
+# Formato: nombre<TAB>color(hex sin #)<TAB>descripción
+# Política del prompt: 1 type: + 1-2 area: + 1 priority:, más needs-info si aplica.
+# No borrar/renombrar labels sin actualizar también el prompt del workflow.
+
+type:bug	d73a4a	Algo no funciona como debería
+type:feature	a2eeef	Nueva funcionalidad o mejora
+type:docs	0075ca	Documentación (README, CLAUDE.md)
+type:refactor	c5def5	Mejora interna sin cambio de comportamiento
+type:question	d876e3	Duda o consulta, no requiere código
+
+area:gameplay	fbca04	Lógica de juego: colisión, rotación, bloqueo, líneas, puntuación
+area:render	5319e7	Dibujado en canvas: grid, colores, pieza fantasma, next
+area:ui	bfd4f2	index.html / style.css: layout, overlay, textos
+area:controls	0e8a16	Teclado, pausa, reinicio
+area:repo	ededed	Workflows, CI, configuración del repositorio
+
+priority:high	b60205	Rompe el juego o bloquea el uso
+priority:medium	fbca04	Molesto pero con workaround
+priority:low	0e8a16	Cosmético o menor
+
+needs-info	e4e669	Falta información para poder diagnosticar
